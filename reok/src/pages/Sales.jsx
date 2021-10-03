@@ -102,8 +102,6 @@ function Sales() {
                         </tbody>
                     </table>
                 </div>
-            
-                <Footer />
             </section>
               
     </div>
