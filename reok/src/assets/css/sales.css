@@ -1,3 +1,8 @@
+button{
+    margin-right: 20px;
+    padding: 5px;
+}
+
 .sales-intro-section{
     /* Aqui lo que hice fue darle una altura y ancho del 100% para que ocupe toda la pagina. */
     font-family: "Poppins", sans-serif;

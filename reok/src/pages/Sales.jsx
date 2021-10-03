@@ -106,6 +106,9 @@ function Sales() {
                 <br />
               </div>
               <button>Registrar</button>
+              <button>Actualizar</button>
+              <button>Consultar</button>
+              <button>Editar/Borrar</button>
             </main>
           </form>
 
