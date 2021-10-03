@@ -5,6 +5,7 @@ function Products() {
     return (
         <div className="Products">
             <Navbar title={'Gestion de Productos'}/>
+                <section class="productos"> 
                 <div class="tabla">
                     <table>
                         <tr>
@@ -41,7 +42,9 @@ function Products() {
                             </td>
                         </tr>
                     </table>
+                  
                 </div>
+                </section>
         </div>   
     )
 }
