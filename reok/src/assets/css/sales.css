@@ -1,22 +1,23 @@
-.intro-section{
-    background: blue;
+.sales-intro-section{
+    /* Aqui lo que hice fue darle una altura y ancho del 100% para que ocupe toda la pagina. */
     font-family: "Poppins", sans-serif;
-    font-weight: 100px;
     width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+    height: 100%;
+    background: linear-gradient(to right, #00f28e, #00B4D8);
 }
 .form-ventas{
-    background-color:rgba,(255, 255,255, 0,3) ;
-    padding: 3rem;
-    border-radius: 10px;
+    /* Aqui solo cambie el color de fondo por uno blanco transparente */
+    background-color: rgba(255, 255, 255, 0.4) ;
+    padding: 2rem;
+    border-radius: 1rem;
     scroll-snap-align: center;
     scroll-snap-stop: always;
     border : 1px solid white;
+    margin: 0.5rem;
 }
 
 h3{
+    /* El titulo que tenias arriba lo meti en el formulario  */
     font-family: var (--bs-body-font-family);
     font-size: 1.5rem;
     color: black;
@@ -32,12 +33,29 @@ h3{
     width: 100%;
 }
 .default{
-    background-color: blue;
+    /* Lo que seria a la tabla le cambie el color de fondo y le di una altura 
+    y ancho de 80% para que ocupe casi todo el contenedor */
+    background-color: rgba(255, 255, 255, 0.4);
     text-align: left;
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
+    height: 80%;
 }
-.table{
-    margin: 159px auto;
-    width: 600px;
+.sales-table{
+    /* Al div que contiene la tabla le di un display flex y le dije que los elementos que contenga estuvieran centrados en este caso
+    la tabla. Tambien le cambie el color de fondo y le redondee los bordes*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    border : 1px solid white;
+}
+
+.sales-main-container {
+    /* Este es el estilo para el contenedor que encierra la tabla y el formulario y 
+    le di un display flex para que estubieran pegados y de tal forma poder poner la tabla a la izquierda */
+    display: flex;
 }
