@@ -8,8 +8,16 @@ button{
 
 .tabla{
     font-family: open Sans;
+    
+    background-color: rgba(255, 255, 255, 0.4) ;
+    padding: 2rem;
+    border-radius: 1rem;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    border : 1px solid white;
     margin-top: 50px;
-    margin-left: 400px;
+    margin-left: 300px;
+    max-width: 700px;
 }
 
 .tabla button{
