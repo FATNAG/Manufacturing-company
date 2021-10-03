@@ -1,5 +1,4 @@
 import Navbar from "components/Navbar";
-import Footer from "components/Footer";
 import "assets/css/usuarios.css"
 function Users() {
   return (
@@ -209,7 +208,6 @@ function Users() {
 									</tbody>
 				    </table>
 				</div>
-        <Footer />
       </section>
         
     </div>
