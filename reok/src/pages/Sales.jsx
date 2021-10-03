@@ -59,13 +59,12 @@ function Sales() {
                 <br />
                 </div>
                 <button>Registrar</button>
+                <button>Modificar</button>
                 
                 </main>
                 </form>
-                
-
-                <div name="table">
-        
+             <div className ="table">
+                 <h3>Maestro de Ventas</h3>        
 
                     <table class="default">
                         <thead>
@@ -102,6 +101,8 @@ function Sales() {
                         </tbody>
                     </table>
                 </div>
+            
+                <Footer />
             </section>
               
     </div>
