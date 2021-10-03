@@ -14,6 +14,7 @@
     scroll-snap-stop: always;
     border : 1px solid white;
     margin: 0.5rem;
+    max-width: 700px;
 }
 
 h3{
@@ -31,11 +32,15 @@ h3{
 .inputs{
     margin-bottom: 1rem;
     width: 100%;
+    display: flex;
+    align-items: center;
+    flex: 0 0 90px;
 }
 .default{
     /* Lo que seria a la tabla le cambie el color de fondo y le di una altura 
     y ancho de 80% para que ocupe casi todo el contenedor */
     background-color: rgba(255, 255, 255, 0.4);
+    background-color:#CAF0F8;
     text-align: left;
     border-collapse: collapse;
     width: 80%;
