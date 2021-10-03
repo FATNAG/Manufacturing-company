@@ -94,8 +94,11 @@ function Users() {
                 id="registrar_usuario" class="botton"
                 name="registrar_usuario"
                 type="submit"
-                value="Registrar/Actualizar"
+                value="Registrar"
               />
+              <button id="reset" class="botton" name="reset" type="reset">
+                Consultar
+              </button>
               <button id="reset" class="botton" name="reset" type="reset">
                 Restaurar
               </button>
@@ -206,7 +209,11 @@ function Users() {
                                             
 										</tr>
 									</tbody>
+                  
 				    </table>
+            <button id="cambios" class="botton" name="cambios" type="button">
+                   Aplicar/Actualizar 
+                  </button>
 				</div>
       </section>
         
