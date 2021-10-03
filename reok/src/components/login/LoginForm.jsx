@@ -1,6 +1,6 @@
-import LoginImage from 'media/images/login-image-02.png';
-import HeaderLoginForm from './HeaderLoginForm';
-import LeftContainerLoginForm from './LeftContainerLoginForm';
+import LoginImage from "media/images/login-image-02.png";
+import HeaderLoginForm from "./HeaderLoginForm";
+import LeftContainerLoginForm from "./LeftContainerLoginForm";
 
 const LoginForm = () => {
   return (
@@ -13,6 +13,16 @@ const LoginForm = () => {
 };
 
 const RightContainerLoginForm = () => {
+  const changeFromLoginToSignup = () => {
+    document.getElementById("login-container").classList.toggle("active");
+    document.getElementById("signup-container").classList.toggle("active");
+  };
+
+  const changeFromLoginToForgot = () => {
+    document.getElementById("login-container").classList.toggle("active");
+    document.getElementById("forgot-container").classList.toggle("active");
+  };
+
   return (
     <div className="row form-container__right">
       <form action="../index.html" className="d-grid gap-2">
@@ -31,17 +41,22 @@ const RightContainerLoginForm = () => {
           <div className="input-box__input">
             <i className="fas fa-lock"></i>
             <label for="email">Password</label>
-            <input type="password" className="password" name="password" required="true" />
+            <input
+              type="password"
+              className="password"
+              name="password"
+              required="true"
+            />
           </div>
         </div>
-        <div className='otherLinksToLogin'>
-          <div className='btn btn-primary fs-2'>
+        <div className="otherLinksToLogin">
+          <div className="btn btn-primary fs-2">
             <i className="fab fa-google-plus-g"></i>
           </div>
-          <div className='btn btn-primary fs-2'>
+          <div className="btn btn-primary fs-2">
             <i className="fab fa-facebook-f"></i>
           </div>
-          <div className='btn btn-primary fs-2'>
+          <div className="btn btn-primary fs-2">
             <i className="fab fa-apple"></i>
           </div>
         </div>
@@ -53,12 +68,20 @@ const RightContainerLoginForm = () => {
         />
         <div className="backup-links">
           <div className="text-end">
-            <button onclick="toggleLoginSignup()" type="button" className="btn">
+            <button
+              onClick={changeFromLoginToSignup}
+              type="button"
+              className="btn"
+            >
               Signup
             </button>
           </div>
           <div className="text-end">
-            <button onclick="toggleLoginForgot()" type="button" className="btn">
+            <button
+              onClick={changeFromLoginToForgot}
+              type="button"
+              className="btn"
+            >
               Forgot password
             </button>
           </div>

@@ -13,6 +13,17 @@ const ForgotForm = () => {
 };
 
 const RightContainerSignupForm = () => {
+
+  const changeFromForgotToLogin = () => {
+    document.getElementById("forgot-container").classList.toggle("active");
+    document.getElementById("login-container").classList.toggle("active");
+  };
+
+  const changeFromForgotToSignup = () => {
+    document.getElementById("forgot-container").classList.toggle("active");
+    document.getElementById("signup-container").classList.toggle("active");
+  };
+
   return (
     <div class="row form-container__right">
       <form class="d-grid gap-2">
@@ -36,12 +47,12 @@ const RightContainerSignupForm = () => {
       </form>
       <div class="backup-links">
         <div class="text-end">
-          <button onclick="toggleLoginForgot()" type="button" class="btn">
+          <button onClick={changeFromForgotToLogin} type="button" class="btn">
             Login
           </button>
         </div>
         <div class="text-end">
-          <button onclick="toggleSignupForgot()" type="button" class="btn">
+          <button onClick={changeFromForgotToSignup} type="button" class="btn">
             Sign up
           </button>
         </div>
