@@ -1,6 +1,5 @@
 import Navbar from "components/Navbar";
-import Footer from "components/Footer";
-import "assert/css/products.css";
+import "assets/css/products.css";
 
 function Products() {
     return (
@@ -10,16 +9,16 @@ function Products() {
                     <table>
                         <tr>
                             <td><h3>Identificador: </h3></td>
-                            <td><input type="text" name="fname" maxlength="50"></input></td>
+                            <td><input type="text" name="fname" maxlength="50"/></td>
                         </tr>
                         <tr>
                             <td><h3>Valor unitario: </h3></td>
-                            <td><input type="text" name="fname" maxlength="50"></input></td>
+                            <td><input type="text" name="fname" maxlength="50"/></td>
                         </tr>
                         <tr>
                             <td><h3>Estado: </h3></td>
-                            <td><input type="radio" name="valor">Disponible</input></td>
-                            <td><input type="radio" name="valor">No Disponible</input></td>
+                            <td><input type="radio" name="valor"/>Disponible</td>
+                            <td><input type="radio" name="valor"/>No Disponible</td>
                         </tr>
                         <tr>
                             <td><h3>Descripcion: </h3></td>
