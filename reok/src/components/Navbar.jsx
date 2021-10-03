@@ -2,8 +2,17 @@ import profileImage from '../media/images/profile-image-01.png';
 import logo from '../media/images/recycle-icon-01.png'
 import 'assets/css/navbar.css';
 import {Link} from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Navbar = ({title}) => {
+  // This useEffect is for the color change of the navbar when you scroll down and the button up appearence
+  useEffect (() => {
+    window.addEventListener("scroll", function () {
+      var navbar = document.querySelector("nav");
+      navbar.classList.toggle("sticky", window.scrollY > 0);
+    });
+  }, []);
+
   return (
     <nav class="navbar shadow" id="navbar">
       <button
