@@ -10,14 +10,24 @@ th{
   background-color: rgb(88, 137, 228) !important;
   border: 1px solid white ;
 }
+.users{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: hidden;
+}
 
+.users > section{
+  height: 100%;
+  overflow-y: scroll;
+}
 
 .intro-section {
+    height: 100vh;  
     background: linear-gradient(to right, #00f28e, #00B4D8);
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     width: 100%;
-    height: 100vh;
     margin: 0;
     padding: 0;
   }  

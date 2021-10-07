@@ -2,9 +2,9 @@ import Navbar from "components/Navbar";
 import "assets/css/usuarios.css"
 function Users() {
   return (
-    <div className="Users">
+    <div className="users">
       <Navbar title={'Gestion de Usuario'}/>
-        <section id="section" class="intro-section" >
+      <section id="section" class="intro-section" >
         <h3>Registrar/Actualizar Usuario </h3>
         <form action="#" method="post" name="gestion_usuario" class="form-usuario">
           <div class="contenedor-inputs">
@@ -107,114 +107,114 @@ function Users() {
           </div>
         </form>
         <div class="table-responsive">
-          <h3>Maestra de usuarios</h3> 
-            <table class="table table-hover text-center">
-									<thead>
-										<tr>
-											<th class="text-center">ID</th>
-											<th class="text-center">Nombre</th>
-											<th class="text-center">Apellidos</th>
-											<th class="text-center">Usuario</th>
-											<th class="text-center">Email</th>
-											<th class="text-center">Telefono</th>
-											<th class="text-center">Rol</th>
-											<th class="text-center">Autorizacion</th>
-											<th class="text-center">Baja</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>Maria</td>
-											<td>Jadnat</td>
-											<td>MAJAXX</td>
-											<td>majoxx@gmail.com</td>
-											<td>1234</td>
-											<td>Admin</td>
-											<td><select name="us-autorizar" id="us-autorizar" >
-                        <option value="#"> </option>
-                        <option value="pendiente">Pendiente</option>
-                        <option value="autorizado">Aprobado</option>
-                        <option value="no_autorizado">Negado</option>
-                      </select></td>
-                      <td> <label >.</label><input name="us-borrar" id="us-borrar" type="checkbox"   /></td>
-                                            
-										</tr>
-										<tr>
-											<td>2</td>
-                      <td>Juan</td>
-											<td>Hernandez</td>
-											<td>JUHEXX</td>
-											<td>juhexx@gmail.com</td>
-											<td>1234</td>
-											<td>User</td>
-											<td><select name="us-autorizar" id="us-autorizar" >
-                        <option value="#"> </option>
-                        <option value="pendiente">Pendiente</option>
-                        <option value="autorizado">Aprobado</option>
-                        <option value="no_autorizado">Negado</option>
-                      </select></td>
-                      <td> <label >.</label><input name="us-borrar" id="us-borrar" type="checkbox"   /></td>
-                                            
-										</tr>
-                    <tr>
-											<td>3</td>
-											<td>Daniel</td>
-											<td>Ramirez</td>
-											<td>DARAXX</td>
-											<td>daraxx@gmail.com</td>
-											<td>1234</td>
-											<td>Vendedor</td>
-											<td><select name="us-autorizar" id="us-autorizar" >
-                        <option value="#"> </option>
-                        <option value="pendiente">Pendiente</option>
-                        <option value="autorizado">Aprobado</option>
-                        <option value="no_autorizado">Negado</option>
-                      </select></td>
-                      <td> <label >.</label><input name="us-borrar" id="us-borrar" type="checkbox"   /></td>
-                                            
-										</tr>
-                    <tr>
-											<td>4</td>
-											<td>Jofay</td>
-											<td>Segura</td>
-											<td>JOSEGXX</td>
-											<td>josegxx@gmail.com</td>
-											<td>1234</td>
-											<td>User</td>
-											<td><select name="us-autorizar" id="us-autorizar" >
-                        <option value="#"> </option>
-                        <option value="pendiente">Pendiente</option>
-                        <option value="autorizado">Aprobado</option>
-                        <option value="no_autorizado">Negado</option>
-                      </select></td>
-                      <td> <label >.</label><input name="us-borrar" id="us-borrar" type="checkbox"   /></td>
-                                            
-										</tr>
-                    <tr>
-											<td>5</td>
-											<td>Dayana</td>
-											<td>Mantilla</td>
-											<td>DAMAXX</td>
-											<td>dama@gmail.com</td>
-											<td>1234</td>
-											<td>Vendedor</td>
-											<td><select name="us-autorizar" id="us-autorizar" >
-                        <option value="#"> </option>
-                        <option value="pendiente">Pendiente</option>
-                        <option value="autorizado">Aprobado</option>
-                        <option value="no_autorizado">Negado</option>
-                      </select></td>
-                      <td> <label >.</label><input name="us-borrar" id="us-borrar" type="checkbox"   /></td>
-                                            
-										</tr>
-									</tbody>
-                  
-				    </table>
-            <button id="cambios" class="botton" name="cambios" type="button">
-                   Aplicar/Actualizar 
-                  </button>
-				</div>
+          <h3>Maestra de usuarios</h3>
+          <table class="table table-hover text-center">
+            <thead>
+              <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">Nombre</th>
+                <th class="text-center">Apellidos</th>
+                <th class="text-center">Usuario</th>
+                <th class="text-center">Email</th>
+                <th class="text-center">Telefono</th>
+                <th class="text-center">Rol</th>
+                <th class="text-center">Autorizacion</th>
+                <th class="text-center">Baja</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Maria</td>
+                <td>Jadnat</td>
+                <td>MAJAXX</td>
+                <td>majoxx@gmail.com</td>
+                <td>1234</td>
+                <td>Admin</td>
+                <td><select name="us-autorizar" id="us-autorizar" >
+                  <option value="#"> </option>
+                  <option value="pendiente">Pendiente</option>
+                  <option value="autorizado">Aprobado</option>
+                  <option value="no_autorizado">Negado</option>
+                </select></td>
+                <td> <label >.</label><input name="us-borrar" id="us-borrar" type="checkbox" /></td>
+
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Juan</td>
+                <td>Hernandez</td>
+                <td>JUHEXX</td>
+                <td>juhexx@gmail.com</td>
+                <td>1234</td>
+                <td>User</td>
+                <td><select name="us-autorizar" id="us-autorizar" >
+                  <option value="#"> </option>
+                  <option value="pendiente">Pendiente</option>
+                  <option value="autorizado">Aprobado</option>
+                  <option value="no_autorizado">Negado</option>
+                </select></td>
+                <td> <label >.</label><input name="us-borrar" id="us-borrar" type="checkbox" /></td>
+
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Daniel</td>
+                <td>Ramirez</td>
+                <td>DARAXX</td>
+                <td>daraxx@gmail.com</td>
+                <td>1234</td>
+                <td>Vendedor</td>
+                <td><select name="us-autorizar" id="us-autorizar" >
+                  <option value="#"> </option>
+                  <option value="pendiente">Pendiente</option>
+                  <option value="autorizado">Aprobado</option>
+                  <option value="no_autorizado">Negado</option>
+                </select></td>
+                <td> <label >.</label><input name="us-borrar" id="us-borrar" type="checkbox" /></td>
+
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Jofay</td>
+                <td>Segura</td>
+                <td>JOSEGXX</td>
+                <td>josegxx@gmail.com</td>
+                <td>1234</td>
+                <td>User</td>
+                <td><select name="us-autorizar" id="us-autorizar" >
+                  <option value="#"> </option>
+                  <option value="pendiente">Pendiente</option>
+                  <option value="autorizado">Aprobado</option>
+                  <option value="no_autorizado">Negado</option>
+                </select></td>
+                <td> <label >.</label><input name="us-borrar" id="us-borrar" type="checkbox" /></td>
+
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Dayana</td>
+                <td>Mantilla</td>
+                <td>DAMAXX</td>
+                <td>dama@gmail.com</td>
+                <td>1234</td>
+                <td>Vendedor</td>
+                <td><select name="us-autorizar" id="us-autorizar" >
+                  <option value="#"> </option>
+                  <option value="pendiente">Pendiente</option>
+                  <option value="autorizado">Aprobado</option>
+                  <option value="no_autorizado">Negado</option>
+                </select></td>
+                <td> <label >.</label><input name="us-borrar" id="us-borrar" type="checkbox" /></td>
+
+              </tr>
+            </tbody>
+
+          </table>
+          <button id="cambios" class="botton" name="cambios" type="button">
+            Aplicar/Actualizar
+          </button>
+        </div>
       </section>
         
     </div>
