@@ -6,6 +6,9 @@ const router=Router();
 router.post('/',userCtrl.createOne)
 //read
 router.get('/', userCtrl.getAll)    //llamo la funcion de userCtrl
-
-
+//update
+router.put('/', userCtrl.editOne)
+//delete
+router.delete('/',userCtrl.deleteOne)
+ 
 module.exports=router; 

@@ -13,5 +13,12 @@ userCtrl.getAll= async(req,res)=>{
     res.json({msg:'Funciona'})
 }
 
+//update
+userCtrl.editOne= async(req,res)=>{
+    res.json({msg:'Funciona'})
+
+//delete
+userCtrl.deleteOne= async(req,res)=>{
+    res.json({msg:'Funciona'})
 
 module.exports=userCtrl
