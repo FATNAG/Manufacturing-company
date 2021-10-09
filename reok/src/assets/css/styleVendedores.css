@@ -129,10 +129,10 @@ header{
     z-index:100;
     transition:width 300ms;
 }
-#nav-toggle{
+/* #nav-toggle{
 
     display: none;
-}
+} */
 
 
 header h2{
@@ -343,7 +343,7 @@ tr td:last-child{
     color: var(--main-color);
 }
 @media only screen and (max-width: 1200px){
-    .sidebar {
+    /* .sidebar {
 
         width: 70px;
     
@@ -367,7 +367,7 @@ tr td:last-child{
     
         display:none;
     
-    }
+    } */
      .main-content{
     
         margin-left:70px;
@@ -379,11 +379,11 @@ tr td:last-child{
        left:70px;
     
     }
-    .sidebar:hover {
+    /* .sidebar:hover {
 
         width: 345px;
     
-    }
+    } */
     
 }
 
@@ -413,9 +413,9 @@ tr td:last-child{
         display:none;
 
     }
-    .sidebar{
+    /* .sidebar{
         left: -100% !important;
-    }
+    } */
 
     header h2{
 

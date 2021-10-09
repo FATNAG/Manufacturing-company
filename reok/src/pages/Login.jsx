@@ -6,7 +6,7 @@ import ForgotForm from 'components/login/ForgotForm';
 function Login() {
   return (
     <div className="Login">
-      <section id="login" class="form">
+      <section id="login" class="login-form">
         <LoginForm />
         <SignupForm />
         <ForgotForm />
