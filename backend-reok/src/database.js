@@ -1,4 +1,5 @@
-import mongoose from "mongoose";
+const mongoose=require('mongoose');
+
 mongoose
   .connect("mongodb://localhost/#", {
     useNewUrlParser: true,
