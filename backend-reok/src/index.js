@@ -7,7 +7,7 @@ const mongoose=require('mongoose');
 // crear servidor
 const app = express();
 const port =process.env.PORT || 3000                 //definir puerto
-
+const MONGODB_URI='mongodb+srv://admin:1234@cluster0.edu3m.mongodb.net/reok?retryWrites=true&w=majority'
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())                           //agrego el middleware
 
@@ -42,18 +42,19 @@ app.get('/api/user',(req,res)=>{
      
  })
  
- 
-/* mongoose.connect('mongodb://localhost:27017/reok', (err,res) =>{      //conectar a DB
+// Conexion a mongo atlas  
+mongoose.connect(MONGODB_URI ||'mongodb://localhost:27017/reok', (err,res) =>{      //conectar a DB
 
 if (err) {
  return console.log(`Error al conectar a la DB: ${err}`)   
 }
 
 console.log('conexion con db establecida')
- */
+
 app.listen(port, ()=> {                            
      console.log(`Example app listening on port:${port}`);  //abro puerto de escucha, imprime cuando lo abre
 });
 
+});
 
 module.exports=app
