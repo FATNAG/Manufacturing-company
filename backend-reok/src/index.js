@@ -3,6 +3,7 @@
 const express=require('express');
 const bodyParser=require('body-parser');
 const mongoose=require('mongoose');   
+const User=require('./models/user.model')      //importamos el modelo
 
 // crear servidor
 const app = express();
@@ -22,14 +23,38 @@ app.get('/api/user',(req,res)=>{
  
  //ruta Leer por ID
  app.get('/api/user/:userId',(req,res)=>{
-     
+     let userId=req.params.userId
+
+     User.findById(userId,(err,user) =>{
+     //retun sale de la funcion si hay error    
+     if (err) return res.status(500).send({message:`Error al realizar consulta:${err}`})
+     if(!user) return res.status(484).send({message:`El usuario no existe`})
+
+     res.status(200).send({user:user})
+    })
  })
  
  //ruta tipo Post, enviar datos
  app.post('/api/user/',(req,res)=>{
-     console.log(req.body)                                //para probarla se accede al body (parser)
+    console.log('POST /api/user')
+    console.log(req.body)
+    //almacenar en DB
+    let user=new User()
+    user.usuarioID=req.body.usuarioID
+    user.nombre=req.body.nombre
+    user.apellido=req.body.apellido
+    user.email=req.body.email
+    user.telefono=req.body.telefono
+    user.rol=req.body.rol
+
+    user.save((err,userStored) =>{
+      if(err) res.status (500).send({message:`Error al guardar en DB:${err}`})  
+
+      res.status(200).send({user:userStored})
+    })   //guardar producto y funcion callback
+     /* console.log(req.body)                                //para probarla se accede al body (parser)
      //res.send(200,{message:'El usuario se ha recibido'}) // respuesta, envia el status 
-     res.status(200).send({message:'El usuario se ha recibido'})  //respuesta, incluye el .status
+     res.status(200).send({message:'El usuario se ha recibido'})  //respuesta, incluye el .status */
  })
  
  //ruta de actualizaciones por ID
@@ -45,15 +70,15 @@ app.get('/api/user',(req,res)=>{
 // Conexion a mongo atlas  
 mongoose.connect(MONGODB_URI ||'mongodb://localhost:27017/reok', (err,res) =>{      //conectar a DB
 
-if (err) {
- return console.log(`Error al conectar a la DB: ${err}`)   
-}
+    if (err) {
+     return console.log(`Error al conectar a la DB: ${err}`)   
+    }
 
-console.log('conexion con db establecida')
+    console.log('conexion con db establecida')
 
-app.listen(port, ()=> {                            
-     console.log(`Example app listening on port:${port}`);  //abro puerto de escucha, imprime cuando lo abre
-});
+    app.listen(port, ()=> {                            
+         console.log(`Example app listening on port:${port}`);  //abro puerto de escucha, imprime cuando lo abre
+    });
 
 });
 
