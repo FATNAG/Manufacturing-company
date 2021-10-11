@@ -18,8 +18,14 @@ app.get('/', function (req, res) {
 
 //ruta leer todos
 app.get('/api/user',(req,res)=>{
-     res.send(200,{users:[]})       //para probarla
- })
+    User.find({}, (err,users)=>{
+    if (err) return res.status(500).send({message:`Error al realizar consulta:${err}`})
+    if(!users) return res.status(484).send({message:`No existen usuarios`})
+   
+    res.send(200,{users:users})       //para probarla, con array [] 
+    
+    })
+})
  
  //ruta Leer por ID
  app.get('/api/user/:userId',(req,res)=>{
@@ -59,12 +65,25 @@ app.get('/api/user',(req,res)=>{
  
  //ruta de actualizaciones por ID
  app.put('/api/user/:userId',(req,res)=>{
-     
- })
+    let userId=req.params.userId
+    let update=req.body
+    User.findByIdAndUpdate(userId,update,(err, userUpdated) => { //le paso objeto con los campos a actualizar
+    if (err)res.status(500).send({message:`Error al actualizar usuario:${err}`})
+    res.status(200).send({user:userUpdated})
+    })
+})
  
  //ruta borrar por ID
  app.delete('/api/user/:userId',(req,res)=>{
-     
+    let userId=req.params.userId
+    User.findById(userId,(err,user) =>{
+        //retun sale de la funcion si hay error    
+        if (err)res.status(500).send({message:`Error al borar usuario:${err}`})
+        user.remove(err => {  
+            if (err)res.status(500).send({message:`Error al borar usuario:${err}`})
+            res.status(200).send({message:`El usuario se ha borrado`})
+        })
+    }) 
  })
  
 // Conexion a mongo atlas  
@@ -77,7 +96,7 @@ mongoose.connect(MONGODB_URI ||'mongodb://localhost:27017/reok', (err,res) =>{  
     console.log('conexion con db establecida')
 
     app.listen(port, ()=> {                            
-         console.log(`Example app listening on port:${port}`);  //abro puerto de escucha, imprime cuando lo abre
+         console.log(`API listening on port:${port}`);  //abro puerto de escucha, imprime cuando lo abre
     });
 
 });
