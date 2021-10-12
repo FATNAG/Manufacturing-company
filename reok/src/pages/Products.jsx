@@ -44,6 +44,7 @@ function Products() {
                   <th>Valor Unitario</th>
                   <th>Disponible</th>
                   <th>Valor Inventario</th>
+                  <th>Accion</th>
                 </tr>
               </thead>
               <tbody>
