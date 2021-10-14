@@ -1,0 +1,24 @@
+@use '../config' as *;
+@use '../components/mixins' as *;
+
+.showcaseImage{
+    width: 100%;
+    height: 41.1rem;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('media/images/showcase-01.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase-header{
+    margin: 0.5rem;
+
+    h2{
+        font-size: 4.5rem;
+        margin-bottom: 2rem;
+    }
+
+}

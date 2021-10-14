@@ -1,4 +1,4 @@
-# Manufacturing Company
+git # Manufacturing Company
 
 ## Objective
 It is proposed to anlyze, design and create a software application that allows to control the physical and virtual sales of a manufacturing company and follow up

@@ -1,0 +1,13 @@
+@use '../config' as *;
+@use '../components/mixins' as *;
+@use '../components/forms' as *;
+
+#forgot-container{
+    display: none;
+}
+
+#forgot-container{
+    &.active{
+        display: flex;
+    }
+}

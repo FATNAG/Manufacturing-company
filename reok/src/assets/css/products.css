@@ -1,0 +1,35 @@
+.productos {
+    display: flex;
+    flex-direction:column;
+    height: 100vh;
+    overflow-y: scroll;
+    background: linear-gradient(to right, #00f28e, #00B4D8);
+}
+
+.form{
+    font-family: open Sans;
+    background-color: rgba(255, 255, 255, 0.4) ;
+    padding: 2rem;
+    border-radius: 1rem;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    border : 1px solid white;
+    margin-top: 50px;
+    margin-left: 300px;
+    max-width: 700px;
+}
+
+.botton {
+    
+    background-color:aquamarine ;
+    color: var(--blanco);
+    margin: 1rem;
+    padding: .5rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border:none;
+  }
+

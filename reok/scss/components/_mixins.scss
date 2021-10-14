@@ -1,0 +1,21 @@
+@use '../config' as *;
+
+// Gradient
+@mixin gradient{
+    background: linear-gradient(to right, $nice-green, $medium-light-blue);
+}
+
+// Absolute center
+@mixin absoluteCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Gradient text
+@mixin gradientText{
+    background: -webkit-linear-gradient($nice-green, $medium-light-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

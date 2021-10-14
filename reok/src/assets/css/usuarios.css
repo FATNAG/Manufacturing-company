@@ -1,0 +1,134 @@
+
+h3 {
+    font-family: var(--bs-body-font-family);
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+}
+
+th{
+  background-color: rgb(88, 137, 228) !important;
+  border: 1px solid white ;
+}
+.users{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.users > section{
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.intro-section {
+    height: 100vh;  
+    background: linear-gradient(to right, #00f28e, #00B4D8);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }  
+
+.form-usuario {
+  background-color:rgba(255, 255, 255, 0.3);
+  padding: 3rem;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  border: 1px solid white ;
+ 
+}
+@media (min-width:768px) {
+  .form-usuario {
+      max-width: 700px;
+      margin: 0 auto;
+  }
+}
+.contenedor-inputs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.inputs {
+  margin-bottom: 1rem;
+  width: 100%;
+
+}
+@media (min-width:480px) {
+  .inputs {
+      display: flex;
+      align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .inputs{
+      flex: 0 0 calc(50% - .5rem)
+  }
+}
+.inputs label {
+  font-weight: 600;
+  margin-bottom: .5rem;
+  display: block;
+}
+@media (min-width:480px) {
+  .inputs label {
+      flex: 0 0 90px;
+  }
+}
+.inputs textarea {
+  width: 100%;
+  padding: .5rem;
+  border: none;
+  border-radius: .5rem;
+}
+.contenedor-botones{
+  margin: 0;
+}
+.footer-usuario {
+  margin-top: 5px;
+}
+.text-center{text-align:center}
+.table-responsive
+{
+  padding-top: 10px;
+  min-height:.01%;
+  overflow-x:auto;
+  width:100%;
+  margin-bottom:15px;
+  overflow-y:hidden;
+  -ms-overflow-style:-ms-autohiding-scrollbar;
+  
+}
+.table {
+  width:98%;
+  max-width:100%;
+  margin-left: 10px;
+  margin-bottom:20px;
+  background-color:#fff;
+  border-collapse:collapse;
+  border-radius: 10px;
+
+}
+.botton {
+  background-color:aquamarine ;
+  color: var(--blanco);
+  margin: 1rem;
+  padding: .5rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border:none;
+}
+
+.botton:hover{
+  cursor:pointer;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+  transition: all 0.2s ease;
+}
+
