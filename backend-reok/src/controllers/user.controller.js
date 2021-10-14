@@ -1,5 +1,5 @@
 'use strict'   //modo de ejecutar el codigo
-const User=require('./models/user.model')      //importamos el modelo
+const User=require('../models/user.model')      //importamos el modelo
 
 
 function getUser (req,res) {
