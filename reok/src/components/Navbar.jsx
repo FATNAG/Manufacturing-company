@@ -29,9 +29,6 @@ const Navbar = ({title}) => {
       >
         <span className="fas fa-bars"></span>
       </button>
-      <a href="#section" onClick="toggleMenu();" className="goTop">
-        <i className="fas fa-arrow-alt-circle-up"></i>
-      </a>
       <h2 className="text-3xl font-bold">{title}</h2>
       <div className="page-title">
         <div className="image-profile">
