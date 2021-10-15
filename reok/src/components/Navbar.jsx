@@ -32,7 +32,7 @@ const Navbar = ({title}) => {
       <a href="#section" onClick="toggleMenu();" className="goTop">
         <i className="fas fa-arrow-alt-circle-up"></i>
       </a>
-      <h2>{title}</h2>
+      <h2 className="text-3xl font-bold">{title}</h2>
       <div className="page-title">
         <div className="image-profile">
           <button onClick={() => loginWithRedirect()}>
@@ -100,8 +100,10 @@ const Navbar = ({title}) => {
             </li>
             <li>
               <button
+                className="text-gray-100 font-bold w-full flex items-center justify-start text-lg"
                 onClick={() => logout({ returnTo: window.location.origin })}
               >
+                <i className="fas fa-sign-out-alt mr-5 ml-3"></i>
                 Logout
               </button>
             </li>
