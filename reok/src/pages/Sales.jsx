@@ -16,8 +16,8 @@ function Sales() {
             className="form-ventas"
           >
             <h3>Formulario de Pedido</h3>
-            <main class="contenedor-imput">
-              <div class="inputs">
+            <main className="contenedor-imput">
+              <div className="inputs">
                 <label for="numero de pedido">Numero de Pedido :</label>
                 <br />
                 <input
@@ -30,7 +30,7 @@ function Sales() {
                 />
                 <br />
               </div>
-              <div class="inputs">
+              <div className="inputs">
                 <label for="fecha de pedido">Fecha de Pedido</label>
                 <br />
                 <input
@@ -43,7 +43,7 @@ function Sales() {
                 />
                 <br />
               </div>
-              <div class="inputs">
+              <div className="inputs">
                 <label for="nombre cliente">Nombre Cliente </label>
                 <br />
                 <input
@@ -56,7 +56,7 @@ function Sales() {
                 />
                 <br />
               </div>
-              <div class="inputs">
+              <div className="inputs">
                 <label for="Id cliente">Identificacion Cliente</label>
                 <br />
                 <input
@@ -69,7 +69,7 @@ function Sales() {
                 />
                 <br />
               </div>
-              <div class="inputs">
+              <div className="inputs">
                 <label for="vendedor">Identificacion Vendedor</label>
                 <br />
                 <input
@@ -82,7 +82,7 @@ function Sales() {
                 />
                 <br />
               </div>
-              <div class="inputs">
+              <div className="inputs">
                 <label for="fecha de despacho">Fecha de Despacho</label>
                 <br />
                 <input
@@ -95,7 +95,7 @@ function Sales() {
                 />
                 <br />
               </div>
-              <div class="inputs">
+              <div className="inputs">
                 <label for="forma de pago">Forma de Pago</label>
                 <br />
                 <select name="forma de pago" id="forma de pago">
@@ -113,7 +113,7 @@ function Sales() {
           </form>
 
           <div name="table" className="sales-table">
-            <table class="default">
+            <table className="default">
               <thead>
                 <tr>
                   <th> Codigo</th>

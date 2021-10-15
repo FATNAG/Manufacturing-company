@@ -5,6 +5,8 @@
   "description": "Manufacturing company for recyclable products",
   "main": "index.js",
   "dependencies": {
+    "@auth0/auth0-react": "^1.8.0",
+    "@craco/craco": "^6.3.0",
     "@material-ui/icons": "^4.11.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -17,9 +19,9 @@
   },
   "scripts": {
     "compile:sass": "sass --watch scss:src/assets/css",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -36,7 +38,10 @@
   "author": "Jofay-zs",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.42.1"
+    "autoprefixer": "^9",
+    "postcss": "^7",
+    "sass": "^1.42.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "browserslist": {
     "production": [
