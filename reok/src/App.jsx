@@ -20,9 +20,14 @@ function App() {
               <Route path="/Sales">
                 <Sales/>
               </Route>
-              <Route path="/Users">
-                <Users/>
-              </Route>
+              <Switch>
+                <Route exact path="/" component={UserList} />
+                <Route exact path="/add" component={CreateUser} />
+                <Route exact path="/edit/:id" component={EditUser} />
+                <Route component={NotFound} />
+                <Route path="/Users"> <Users/></Route>
+              </Switch>
+                         
               <Route path='/Vendors'>
                 <Vendors/>
               </Route>
