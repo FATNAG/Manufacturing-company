@@ -1,26 +1,27 @@
 'use strict'
-//importar librerias
-const mongoose=require('mongoose');   
-const app=require('./app')
-// crear servidor
+const { request, response } = require("express");
+const{dbConnection} = require(".")
+const express = require("express");
 
-const port =process.env.PORT || 3000                 //definir puerto
-const MONGODB_URI='mongodb+srv://admin:1234@cluster0.edu3m.mongodb.net/reok?retryWrites=true&w=majority'
+const app = express();
+
+dbConnection();
+
+app.use(express.json());
+
+app.get("/", (request, response)=>{
+    response.json({
+        "mensaje": "appCargo"
+    })
+})
 
 
- 
-// Conexion a mongo atlas  
-mongoose.connect(MONGODB_URI ||'mongodb://localhost:27017/reok', (err,res) =>{      //conectar a DB
+app.use("/api/sale", require("./routes/sale"));
 
-    if (err) {
-     return console.log(`Error al conectar a la DB: ${err}`)   
-    }
-
-    console.log('conexion con db establecida')
-
-    app.listen(port, ()=> {                            
-         console.log(`API listening on port:${port}`);  //abro puerto de escucha, imprime cuando lo abre
-    });
+app.listen(3000, ()=>{
+    console.log('servidor arriba y esta escuchando por el puerto 3000');
 
 });
 
+
+ 
