@@ -14,15 +14,15 @@ const useStyle = makeStyles({
     }
 })
 
-export function NavBarUsers() {
+export function NavBarProducts() {
 
     const classes = useStyle();
 
     return (
         <AppBar position="static" className={classes.header}>
             <Toolbar>
-                <NavLink className={classes.tabs} to="/">Inicio</NavLink>
-                <NavLink className={classes.tabs} to="/add">Crear Usuario</NavLink>
+                <NavLink className={classes.tabs} to="/Products">Productos</NavLink>
+                <NavLink className={classes.tabs} to="/Products/add">Crear Producto</NavLink>
             </Toolbar>
         </AppBar>
     )

@@ -1,10 +1,13 @@
 import Navbar from "components/Navbar";
+import {NavBarUsers} from "components/NavBarUsers"
+
 import "assets/css/usuarios.css"
 function Users() {
   return (
     <div className="users">
       <Navbar title={'Gestion de Usuario'}/>
       <section id="section" class="intro-section" >
+        <NavBarUsers/>
         <h3>Registrar/Actualizar Usuario </h3>
         <form action="#" method="post" name="gestion_usuario" class="form-usuario">
           <div class="contenedor-inputs">

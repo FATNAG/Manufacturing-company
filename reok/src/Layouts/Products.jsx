@@ -1,11 +1,25 @@
 import Navbar from "components/Navbar";
+import Footer from "components/Footer";
+import {NavBarProducts} from "components/NavBarProducts"
 import "assets/css/products.css";
 
-function Products() {
+const Products =({children})=> {
     return (
-      <div className="Products">
+      <div className="Productos">
         <Navbar title={'Gestion de Productos'} />
+        <NavBarProducts/>
+        <main>{children}</main>
+        <Footer />
+        
+      </div>
+    );
+}; 
+
+export default Products;
+     /*  <div className="Products">
+        
         <section class="productos">
+          
           <div class="form">
             <form>
               <h5>Identificador: </h5>
@@ -131,6 +145,5 @@ function Products() {
         </section>
       </div>
     )
-}
+} */
 
-export default Products;
