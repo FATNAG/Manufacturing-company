@@ -46,7 +46,7 @@ export function EditProduct() {
 
     const updateProductData = async () => {
         await editProduct(product);
-        history.push('/');
+        history.push('/Products');
     }
 
     return (
