@@ -27,7 +27,7 @@ app.listen(port, () => {
     console.log(`server listen http://localhost:${port}`)
 })
 
-//ruta base de nuestra API
+//ruta base de la API
 app.get('/', (req, res) => {
     res.json({ status: 200 });
 })
@@ -35,6 +35,6 @@ app.get('/', (req, res) => {
 //importamos todas las rutas que definimos en ./routes/index.js
 const routes = require('./src/routes/index');
 
-/*usando las rutas de productos para toda las peticiones
- que llegen a nuestra API con /productos */
+/*Ruta peticiones API con /productos */
 app.use('/productos', routes.productsRouter);
+app.use('/usuarios', routes.usersRouter);
