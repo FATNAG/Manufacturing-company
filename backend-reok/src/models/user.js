@@ -7,7 +7,8 @@ const UserSchema = Schema({
     email:String,
     telefono:Number,
     autorizar:Boolean,
-    rol:{type:String,enum:['administrador','usuario','vendedor']}
+    rol:String
+    //rol:{type:String,enum:['administrador','usuario','vendedor']}
 })
 
 module.exports = mongoose.model('users', UserSchema);
