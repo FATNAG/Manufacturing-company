@@ -6,7 +6,7 @@ import "assets/css/usuarios.css"
 
 const Users =({children})=> {
   return (
-    <div className="Users">
+    <div className="Usuarios">
       <Navbar title={'Gestion de Usuarios'} />
       <NavBarUsers/>
       <main>{children}</main>

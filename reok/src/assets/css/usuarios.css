@@ -1,4 +1,12 @@
 
+.Usuarios {
+  display: flex;
+  flex-direction:column;
+  height: 100vh;
+  overflow-y: scroll;
+  background: linear-gradient(to right, #00f28e, #00B4D8);
+}
+
 h3 {
     font-family: var(--bs-body-font-family);
     font-size: 1.5rem;

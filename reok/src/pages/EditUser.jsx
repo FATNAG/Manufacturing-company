@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 
 export function EditUser() {
     const [user, setUser] = useState(initialValue);
-    const { valor, descripcion, estado } = user;
+    const { nombre, apellido, email, telefono, autorizar, rol } = user;
     const classes = useStyles();
     let history = useHistory();
 
@@ -41,7 +41,7 @@ export function EditUser() {
     }
 
     const onStateChange = (state) => {
-        setUser({ ...user, "estado": state });
+        setUser({ ...user, "autorizar": state });
     }
 
     const updateUserData = async () => {
@@ -53,24 +53,36 @@ export function EditUser() {
         <FormGroup className={classes.container}>
             <Typography variant="h4">Editar Usuario</Typography>
             <FormControl>
-                <InputLabel htmlFor="my-input">Descripción</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="descripcion" value={descripcion} id="my-input" />
+                <InputLabel htmlFor="my-input">Nombre</InputLabel>
+                <Input onChange={(e) => onValueChange(e)} name="descripcion" value={nombre} id="my-input" />
             </FormControl>
             <FormControl>
-                <InputLabel htmlFor="my-input">Valor</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="valor" value={valor} id="my-input" />
+                <InputLabel htmlFor="my-input">Apellido</InputLabel>
+                <Input onChange={(e) => onValueChange(e)} name="descripcion" value={apellido} id="my-input" />
+            </FormControl>
+            <FormControl>
+                <InputLabel htmlFor="my-input">Email</InputLabel>
+                <Input onChange={(e) => onValueChange(e)} name="descripcion" value={email} id="my-input" />
+            </FormControl>
+            <FormControl>
+                <InputLabel htmlFor="my-input">Telefono</InputLabel>
+                <Input onChange={(e) => onValueChange(e)} name="valor" value={telefono} id="my-input" />
             </FormControl>
             <FormControl component="fieldset">
-                <FormLabel component="legend">Estado</FormLabel>
+                <FormLabel component="legend">Autorizar</FormLabel>
                 <RadioGroup
-                    name='estado'
-                    onChange={(e) => onStateChange(e.target.value === "disponible")}
-                    aria-label="estado"
-                    defaultValue="disponible"
-                    value={estado ? "disponible" : "noDisponible"}>
-                    <FormControlLabel value="disponible" control={<Radio />} label="Disponible" />
-                    <FormControlLabel value="noDisponible" control={<Radio />} label="No Disponible" />
+                    name='autorizar'
+                    onChange={(e) => onStateChange(e.target.value === "autorizado")}
+                    aria-label="autorizar"
+                    defaultValue="autorizado"
+                    value={autorizar ? "autorizado" : "denegado"}>
+                    <FormControlLabel value="autorizado" control={<Radio />} label="Autorizado" />
+                    <FormControlLabel value="denegado" control={<Radio />} label="Denegado" />
                 </RadioGroup>
+            </FormControl>
+            <FormControl>
+                <InputLabel htmlFor="my-input">Rol</InputLabel>
+                <Input onChange={(e) => onValueChange(e)} name="valor" value={rol} id="my-input" />
             </FormControl>
             <FormControl>
                 <Button variant="contained" onClick={(e) => updateUserData()} color="primary">Editar Usuario</Button>

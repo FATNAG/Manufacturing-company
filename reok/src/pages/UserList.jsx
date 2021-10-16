@@ -50,9 +50,12 @@ export function UserList() {
             <TableHead>
                 <TableRow className={classes.thead}>
                     <TableCell>Id</TableCell>
-                    <TableCell>Descripción</TableCell>
-                    <TableCell>Valor</TableCell>
-                    <TableCell>Estado</TableCell>
+                    <TableCell>Nombre</TableCell>
+                    <TableCell>Apellido</TableCell>
+                    <TableCell>Email</TableCell>
+                    <TableCell>Telefono</TableCell>
+                    <TableCell>Autorizar</TableCell>
+                    <TableCell>Rol</TableCell>
                     <TableCell>Accion</TableCell>
                 </TableRow>
             </TableHead>
@@ -61,9 +64,12 @@ export function UserList() {
                     users.map(user => (
                         <TableRow className={classes.row} key={user._id}>
                             <TableCell>{user._id}</TableCell>
-                            <TableCell>{user.descripcion}</TableCell>
-                            <TableCell>{user.valor}</TableCell>
-                            <TableCell>{user.estado ? "Disponible" : "Agotado"}</TableCell>
+                            <TableCell>{user.nombre}</TableCell>
+                            <TableCell>{user.apellido}</TableCell>
+                            <TableCell>{user.email}</TableCell>
+                            <TableCell>{user.telefono}</TableCell>
+                            <TableCell>{user.autorizar ? "Autorizado" : "Denegado"}</TableCell>
+                            <TableCell>{user.rol}</TableCell>
                             <TableCell>
                                 <Button component={Link} to={`/Users/edit/${user._id}`} color="primary">Editar</Button>
                                 <Button color="secondary" onClick={() => deleteUserData(user._id)} >Borrar</Button>
