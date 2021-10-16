@@ -1,13 +1,29 @@
 import Navbar from "components/Navbar";
+import Footer from "components/Footer";
+
 import "assets/css/sales.css";
+
+/* const Sales =({children})=> {
+  return (
+    <div className="Sales">
+      <Navbar title={'Gestion de Ventas'} />
+      <NavBarSales/>
+      <main>{children}</main>
+      <Footer />
+      
+    </div>
+  );
+}; 
+
+export default Sales;
+ */
+
 
 function Sales() {
   return (
     <div className="Sales">
       <Navbar title={"Informacion de Ventas"} />
-      {/* En esta parte renombre la clase ya que la clase intro-section es muy general y solo quiero que a la hora de hacer estilos afecte esta interfaz */}
-      <section id="section" className="sales-intro-section">
-          {/* Despues encerre el formulario y la tabla en un div para a la hora de hacer estilos fuera mas facil */}
+        <section id="section" className="sales-intro-section">
         <div className="sales-main-container">
           <form
             action="#"
@@ -211,3 +227,4 @@ function Sales() {
 }
 
 export default Sales;
+

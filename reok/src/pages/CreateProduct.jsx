@@ -40,8 +40,8 @@ export function CreateProduct() {
     }
 
     return (
-        <FormGroup className={classes.container}>
-            <Typography variant="h4">Agregar Producto</Typography>
+        <FormGroup className={classes.container} >
+            <Typography variant="h4">Registrar Producto</Typography>
             <FormControl>
                 <InputLabel htmlFor="my-input">Descripción</InputLabel>
                 <Input onChange={(e) => onValueChange(e)} name="descripcion" value={descripcion} id="my-input" />

@@ -1,8 +1,24 @@
 import Navbar from "components/Navbar";
+import Footer from "components/Footer";
 import {NavBarUsers} from "components/NavBarUsers"
 
 import "assets/css/usuarios.css"
-function Users() {
+
+const Users =({children})=> {
+  return (
+    <div className="Users">
+      <Navbar title={'Gestion de Usuarios'} />
+      <NavBarUsers/>
+      <main>{children}</main>
+      <Footer />
+      
+    </div>
+  );
+}; 
+
+export default Users;
+
+/* function Users() {
   return (
     <div className="users">
       <Navbar title={'Gestion de Usuario'}/>
@@ -223,5 +239,4 @@ function Users() {
     </div>
   );
 }
-
-export default Users;
+export default Users; */

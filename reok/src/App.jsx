@@ -1,10 +1,11 @@
 import Index from "pages/Index";
 import Login from "pages/Login";
-import Sales from "pages/Sales";
-import Users from "pages/Users";
 import Vendors from "pages/Vendors";
+import Sales from "pages/Sales";
 import General from "Layouts/General";
 import Products from "./Layouts/Products";
+import Users from "./Layouts/Users";
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { ProductList } from './pages/ProductList';
 import { CreateProduct } from  './pages/CreateProduct'
@@ -16,34 +17,35 @@ function App() {
     <Router>
       <Switch>
         <Route path={['/Products']}>
-         <Products>
-           <Switch>
+          <Products>
+            <Switch>
               <Route exact path="/Products" component={ProductList} />
               <Route exact path="/Products/add" component={CreateProduct} />
               <Route exact path="/Products/edit/:id" component={EditProduct} />
-              
             </Switch>     
           </Products>
+        </Route>  
+        
+        <Route path={['/Users']}>
+          <Users>
+            <Switch>
               
+            </Switch>     
+          </Users>
         </Route>
+
+       
         
         
-        <Route path={['/Sales', '/Users', '/Vendors']}>
+        <Route path={['/Sales','/Vendors']}>
           <General>
             <Switch>
-              <Route path="/Products">
-                
-                
-              </Route>
-              <Route path="/Sales">
-                <Sales/>
-              </Route>
-              <Switch>
-                <Route path="/Users"> <Users/></Route>
-              </Switch>
-                         
+                                   
               <Route path='/Vendors'>
                 <Vendors/>
+              </Route>
+              <Route path='/Sales'>
+                <Sales/>
               </Route>
             </Switch>
           </General>
