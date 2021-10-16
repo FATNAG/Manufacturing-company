@@ -10,7 +10,7 @@ export const getUsers = async () => {
     return await axios.get(`${usersUrl}/`);
 }
 
-export const addUser = async (product) => {
+export const addUser = async (user) => {
     return await axios.post(`${usersUrl}/`, user);
     
 }
@@ -20,5 +20,5 @@ export const deleteUser = async (id) => {
 }
 
 export const editUser = async (user) => {
-    return await axios.put(`${UsersUrl}/${user._id}`, user);
+    return await axios.put(`${usersUrl}/${user._id}`, user);
 }

@@ -38,7 +38,7 @@ export function ProductList() {
     }
 
     const deleteProductData = async (id) => {
-        let callbackUser = window.confirm('Esta seguro de elimar el prudcto');
+        let callbackUser = window.confirm('Esta seguro de eliminar el producto');
         if (callbackUser) {
             await deleteProduct(id);
             getAllProducts();
