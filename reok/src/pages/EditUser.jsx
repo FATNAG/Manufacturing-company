@@ -4,9 +4,12 @@ import { editUser, getUser } from '../services/UserService';
 import { useHistory, useParams } from 'react-router-dom';
 
 const initialValue = {
-    valor: '',
-    descripcion: '',
-    estado: true,
+    nombre:'',
+    apellido:'',
+    email:'',
+    telefono:'',
+    autorizar:true,
+    rol:'',
 }
 
 const useStyles = makeStyles({
