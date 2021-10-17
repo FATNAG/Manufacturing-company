@@ -36,5 +36,5 @@ app.get('/', (req, res) => {
 const routes = require('./src/routes/index');
 
 /*Ruta peticiones API con /productos */
-app.use('/products', routes.productsRouter);
-app.use('/users', routes.usersRouter);
+app.use('/productos', routes.productsRouter);
+app.use('/usuarios', routes.usersRouter);
