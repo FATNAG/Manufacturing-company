@@ -62,7 +62,7 @@ const createSale = async (req, res) => {
   }
 };
 
-const updateSale = async (req, res) => {
+const editSale = async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({
@@ -73,14 +73,16 @@ const updateSale = async (req, res) => {
     });
   }
   try {
-    let newsale = {
+    let newSale = {
       id: req.params.id,
-      valor: req.body.valor,
-      descripcion: req.body.descripcion,
-      estado: req.body.estado,
+      name: req.body.name,
+      description: req.body.description,
+      value: req.body.value,
+      amount: req.body.amount,
+      total: req.body.total,
     };
-    await Sales.findByIdAndUpdate(req.params.id, newsale);
-    res.status(201).json({ data: newsale });
+    await Sales.findByIdAndUpdate(req.params.id, newSale);
+    res.status(201).json({ data: newSale });
   } catch (err) {
     res.status(404).json({
       error: {
@@ -117,5 +119,5 @@ const deleteSale = async (req, res) => {
 module.exports.getSale = getSale;
 module.exports.getSales = getSales;
 module.exports.createSale = createSale;
-module.exports.updateSale = updateSale;
+module.exports.editSale = editSale;
 module.exports.deleteSale = deleteSale;
