@@ -4,7 +4,7 @@ import LeftContainerLoginForm from "./LeftContainerLoginForm";
 
 const SignupForm = () => {
   return (
-    <div class="form-container" id="signup-container">
+    <div className="form-container" id="signup-container">
       <LeftContainerLoginForm image={SignupImage} />
       <HeaderLoginForm />
       <RightContainerSignupForm />
@@ -24,89 +24,89 @@ const RightContainerSignupForm = () => {
   };
 
   return (
-    <div class="row form-container__right">
-      <form class="d-grid gap-2">
-        <h2 class="text-center">Signup</h2>
-        <div class="input-box">
-          <div class="input-box__input">
-            <i class="fas fa-signature"></i>
+    <div className="row form-container__right">
+      <form className="d-grid gap-2">
+        <h2 className="text-center">Signup</h2>
+        <div className="input-box">
+          <div className="input-box__input">
+            <i className="fas fa-signature"></i>
             <label for="firstname">First name</label>
             <input
               type="text"
-              class="firstname"
+              className="firstname"
               name="First name"
               required="true"
             />
           </div>
         </div>
-        <div class="input-box">
+        <div className="input-box">
           <div>
-            <i class="fas fa-file-signature"></i>
+            <i className="fas fa-file-signature"></i>
             <label for="lastname">Last name</label>
             <input
               type="text"
-              class="lastname"
+              className="lastname"
               name="Lastname"
               required="true"
             />
           </div>
         </div>
-        <div class="input-box">
-          <div class="input-box__input">
-            <i class="fas fa-user"></i>
+        <div className="input-box">
+          <div className="input-box__input">
+            <i className="fas fa-user"></i>
             <label for="username">Username</label>
             <input
               type="text"
-              class="username"
+              className="username"
               name="username"
               required="true"
               minlength="5"
             />
           </div>
         </div>
-        <div class="input-box">
-          <div class="input-box__input">
-            <i class="fas fa-envelope"></i>
+        <div className="input-box">
+          <div className="input-box__input">
+            <i className="fas fa-envelope"></i>
             <label for="mail">Email</label>
-            <input type="email" class="email" name="email" required="true" />
+            <input type="email" className="email" name="email" required="true" />
           </div>
         </div>
-        <div class="input-box">
-          <div class="input-box__input">
-            <i class="fas fa-lock"></i>
+        <div className="input-box">
+          <div className="input-box__input">
+            <i className="fas fa-lock"></i>
             <label for="password">Password</label>
             <input
               type="password"
-              class="password"
+              className="password"
               name="password"
               required="true"
               minlength="7"
             />
           </div>
         </div>
-        <div class="input-box">
-          <div class="input-box__input">
-            <i class="fas fa-scroll"></i>
+        <div className="input-box">
+          <div className="input-box__input">
+            <i className="fas fa-scroll"></i>
             <label for="rol">Rol</label>
-            <input type="text" class="rol" name="rol" required="true" />
+            <input type="text" className="rol" name="rol" required="true" />
           </div>
         </div>
         <input
           type="submit"
-          class="btn btn-primary btn-submit"
+          className="btn btn-primary btn-submit"
           value="Sign up"
         />
-        <div class="backup-links">
-          <div class="text-end">
-            <button onClick={changeFromSignupToLogin} type="button" class="btn">
+        <div className="backup-links">
+          <div className="text-end">
+            <button onClick={changeFromSignupToLogin} type="button" className="btn">
               Login
             </button>
           </div>
-          <div class="text-end">
+          <div className="text-end">
             <button
               onClick={changeFromSignupToForgot}
               type="button"
-              class="btn"
+              className="btn"
             >
               Forgot password
             </button>

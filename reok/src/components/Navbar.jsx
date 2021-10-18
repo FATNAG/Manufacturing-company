@@ -3,6 +3,7 @@ import logo from '../media/images/recycle-icon-01.png'
 import 'assets/css/navbar.css';
 import {Link} from 'react-router-dom';
 import { useEffect } from 'react';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = ({title}) => {
   // This useEffect is for the color change of the navbar when you scroll down and the button up appearence
@@ -13,85 +14,95 @@ const Navbar = ({title}) => {
     });
   }, []);
 
+  const { loginWithRedirect } = useAuth0();
+
+  const { logout } = useAuth0();
+
   return (
-    <nav class="navbar shadow" id="navbar">
+    <nav className="navbar shadow" id="navbar">
       <button
-        class="btn-bars"
+        className="btn-bars"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar"
       >
-        <span class="fas fa-bars"></span>
+        <span className="fas fa-bars"></span>
       </button>
-      <a href="#section" onclick="toggleMenu();" class="goTop">
-        <i class="fas fa-arrow-alt-circle-up"></i>
-      </a>
-      <h2>{title}</h2>
-      <div class="page-title">
-        <div class="image-profile">
-          <Link to='/Login'>
-            <img src={profileImage} alt="Image profile" />
-          </Link>
+      <h2 className="text-3xl font-bold">{title}</h2>
+      <div className="page-title">
+        <div className="image-profile">
+          <button onClick={() => loginWithRedirect()}>
+            <img src={profileImage} />
+          </button>
         </div>
-        <div class="description-profile">
+        <div className="description-profile">
           <h5>Jofay-zs</h5>
           <p>Desarrollador</p>
         </div>
       </div>
       <div
-        class="offcanvas offcanvas-start sidebar"
-        tabindex="-1"
+        className="offcanvas offcanvas-start sidebar"
+        tabIndex="-1"
         id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel"
       >
-        <div class="offcanvas-header sidebar-brand">
-          <div class="sidebar-brand__brand">
+        <div className="offcanvas-header sidebar-brand">
+          <div className="sidebar-brand__brand">
             <img src={logo} alt="Reok brand" />
             <span>
-              <h1 class="fs-4 text-black">REOK</h1>
+              <h1 className="fs-4 text-black">REOK</h1>
             </span>
           </div>
           <div>
             <button
               type="button"
-              class="btn-close text-reset"
+              className="btn-close text-reset"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
           </div>
         </div>
-        <div class="offcanvas-body sidebar-menu">
+        <div className="offcanvas-body sidebar-menu">
           <ul>
             <li>
-              <Link to='/Home' id="home">
-                <i class="fas fa-home"></i>
+              <Link to="/Home" id="home">
+                <i className="fas fa-home"></i>
                 <span>Home</span>
               </Link>
             </li>
             <li>
-              <Link to='/Sales' id="sales">
-                <i class="fas fa-hand-holding-usd"></i>
+              <Link to="/Sales" id="sales">
+                <i className="fas fa-hand-holding-usd"></i>
                 <span>Sales</span>
               </Link>
             </li>
             <li>
-              <Link to='/Products' id="products">
-                <i class="fas fa-meteor"></i>
+              <Link to="/Products" id="products">
+                <i className="fas fa-meteor"></i>
                 <span>Products</span>
               </Link>
             </li>
             <li>
-              <Link to='/Vendors' id="vendors">
-                <i class="fas fa-address-book"></i>
+              <Link to="/Vendors" id="vendors">
+                <i className="fas fa-address-book"></i>
                 <span>Vendors</span>
               </Link>
             </li>
             <li>
-              <Link to='/Users' id="users">
-                <i class="fas fa-users"></i>
+              <Link to="/Users" id="users">
+                <i className="fas fa-users"></i>
                 <span>Users</span>
               </Link>
+            </li>
+            <li>
+              <button
+                className="text-gray-100 font-bold w-full flex items-center justify-start text-lg"
+                onClick={() => logout({ returnTo: window.location.origin })}
+              >
+                <i className="fas fa-sign-out-alt mr-5 ml-3"></i>
+                Logout
+              </button>
             </li>
           </ul>
         </div>

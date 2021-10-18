@@ -4,7 +4,7 @@ import LeftContainerLoginForm from "./LeftContainerLoginForm";
 
 const ForgotForm = () => {
   return (
-    <div class="form-container" id="forgot-container">
+    <div className="form-container" id="forgot-container">
       <LeftContainerLoginForm image={ForgotImage} />
       <HeaderLoginForm />
       <RightContainerSignupForm />
@@ -25,34 +25,34 @@ const RightContainerSignupForm = () => {
   };
 
   return (
-    <div class="row form-container__right">
-      <form class="d-grid gap-2">
+    <div className="row form-container__right">
+      <form className="d-grid gap-2">
         <h3>Did you forget your password?</h3>
         <p>
           There's no problem write your email and we will send instructions to
           reset your password
         </p>
-        <div class="input-box">
-          <div class="input-box__input">
-            <i class="fas fa-envelope"></i>
+        <div className="input-box">
+          <div className="input-box__input">
+            <i className="fas fa-envelope"></i>
             <label for="email">Email</label>
-            <input type="email" class="email" name="email" required="true" />
+            <input type="email" className="email" name="email" required="true" />
           </div>
         </div>
         <input
           type="submit"
-          class="btn btn-primary btn-submit"
+          className="btn btn-primary btn-submit"
           value="Submit"
         />
       </form>
-      <div class="backup-links">
-        <div class="text-end">
-          <button onClick={changeFromForgotToLogin} type="button" class="btn">
+      <div className="backup-links">
+        <div className="text-end">
+          <button onClick={changeFromForgotToLogin} type="button" className="btn">
             Login
           </button>
         </div>
-        <div class="text-end">
-          <button onClick={changeFromForgotToSignup} type="button" class="btn">
+        <div className="text-end">
+          <button onClick={changeFromForgotToSignup} type="button" className="btn">
             Sign up
           </button>
         </div>

@@ -21,11 +21,13 @@ export default Products;
         <section class="productos">
           
           <div class="form">
+        <section className="productos">
+          <div className="form">
             <form>
               <h5>Identificador: </h5>
-              <input type="text" name="fname" maxlength="50" />
+              <input type="text" name="fname" maxLength="50" />
               <h5>Valor unitario: </h5>
-              <input type="text" name="fname" maxlength="50" />
+              <input type="text" name="fname" maxLength="50" />
               <h5>Estado: </h5>
               <input type="radio" id="b" name="valor" 
               checked/>
@@ -36,21 +38,21 @@ export default Products;
               <h5>Descripcion: </h5>
               <textarea name="comments" cols="45" rows="5"></textarea>
             </form>
-            <div class="botones">
-              <button class="botton" type="submit">
+            <div className="botones">
+              <button className="botton" type="submit">
                 Registrar
               </button>
-              <button class="botton" type="submit">
+              <button className="botton" type="submit">
                 Actualizar
               </button>
-              <button class="botton" type="reset">
+              <button className="botton" type="reset">
                 Borrar
               </button>
             </div>
           </div>
 
           <div name="table" className="sales-table">
-            <table class="default">
+            <table className="default">
               <thead>
                 <tr>
                   <th>Codigo</th>

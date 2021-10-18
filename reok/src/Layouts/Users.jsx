@@ -22,12 +22,11 @@ export default Users;
   return (
     <div className="users">
       <Navbar title={'Gestion de Usuario'}/>
-      <section id="section" class="intro-section" >
-        <NavBarUsers/>
+      <section id="section" className="intro-section" >
         <h3>Registrar/Actualizar Usuario </h3>
-        <form action="#" method="post" name="gestion_usuario" class="form-usuario">
-          <div class="contenedor-inputs">
-            <div class="inputs">
+        <form action="#" method="post" name="gestion_usuario" className="form-usuario">
+          <div className="contenedor-inputs">
+            <div className="inputs">
               <label for="us_nombre">Nombre</label>
               <input
                 id="us_nombre"
@@ -38,7 +37,7 @@ export default Users;
                 value=""
               />
             </div>
-            <div class="inputs">
+            <div className="inputs">
               <label for="us_apellido">Apellido</label>
               <input
                 id="us_apellido"
@@ -50,7 +49,7 @@ export default Users;
               />
             </div>
 
-            <div class="inputs">
+            <div className="inputs">
               <label for="usuario">Usuario</label>
               <input
                 id="usuario"
@@ -61,7 +60,7 @@ export default Users;
                 value=""
               />
             </div>
-            <div class="inputs">
+            <div className="inputs">
               <label for="us_telefono">Telefono</label>
               <input
                 id="us_telefono"
@@ -73,7 +72,7 @@ export default Users;
               />
             </div>
 
-            <div class="inputs">
+            <div className="inputs">
               <label for="credenciales">Credenciales</label>
               <input
                 id="passwd"
@@ -85,7 +84,7 @@ export default Users;
               />
             </div>
 
-            <div class="inputs">
+            <div className="inputs">
               <label for="confirm">Confirmar Credenciales</label>
               <input
                 id="confirm"
@@ -97,7 +96,7 @@ export default Users;
               />
             </div>
 
-            <div class="inputs">
+            <div className="inputs">
               <label for="rol">Rol del usuario</label>
               <select name="rol" id="rol" >
                 <option value="#"> </option>
@@ -108,37 +107,37 @@ export default Users;
                 <option value="ejecutivo">Ejecutivo</option>
               </select>
             </div>
-            <div class="inputs contenedor-botones">
+            <div className="inputs contenedor-botones">
               <input
-                id="registrar_usuario" class="botton"
+                id="registrar_usuario" className="botton"
                 name="registrar_usuario"
                 type="submit"
                 value="Registrar"
               />
-              <button id="reset" class="botton" name="reset" type="reset">
+              <button id="reset" className="botton" name="reset" type="reset">
                 Consultar
               </button>
-              <button id="reset" class="botton" name="reset" type="reset">
+              <button id="reset" className="botton" name="reset" type="reset">
                 Restaurar
               </button>
             </div>
 
           </div>
         </form>
-        <div class="table-responsive">
+        <div className="table-responsive">
           <h3>Maestra de usuarios</h3>
-          <table class="table table-hover text-center">
+          <table className="table table-hover text-center">
             <thead>
               <tr>
-                <th class="text-center">ID</th>
-                <th class="text-center">Nombre</th>
-                <th class="text-center">Apellidos</th>
-                <th class="text-center">Usuario</th>
-                <th class="text-center">Email</th>
-                <th class="text-center">Telefono</th>
-                <th class="text-center">Rol</th>
-                <th class="text-center">Autorizacion</th>
-                <th class="text-center">Baja</th>
+                <th className="text-center">ID</th>
+                <th className="text-center">Nombre</th>
+                <th className="text-center">Apellidos</th>
+                <th className="text-center">Usuario</th>
+                <th className="text-center">Email</th>
+                <th className="text-center">Telefono</th>
+                <th className="text-center">Rol</th>
+                <th className="text-center">Autorizacion</th>
+                <th className="text-center">Baja</th>
               </tr>
             </thead>
             <tbody>
@@ -230,7 +229,7 @@ export default Users;
             </tbody>
 
           </table>
-          <button id="cambios" class="botton" name="cambios" type="button">
+          <button id="cambios" className="botton" name="cambios" type="button">
             Aplicar/Actualizar
           </button>
         </div>

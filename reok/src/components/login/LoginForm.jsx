@@ -49,15 +49,9 @@ const RightContainerLoginForm = () => {
             />
           </div>
         </div>
-        <div className="otherLinksToLogin">
-          <div className="btn btn-primary fs-2">
+        <div className="otherLinksToLogin" styles="width=100%">
+          <div className="btn btn-primary w-100 fs-2">
             <i className="fab fa-google-plus-g"></i>
-          </div>
-          <div className="btn btn-primary fs-2">
-            <i className="fab fa-facebook-f"></i>
-          </div>
-          <div className="btn btn-primary fs-2">
-            <i className="fab fa-apple"></i>
           </div>
         </div>
         <input
