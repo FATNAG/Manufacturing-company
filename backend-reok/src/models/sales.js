@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const Sales = Schema({
   name: String,
-  descripcion: String,
+  description: String,
   value: Number,
   amount: Number,
   total: Number,
