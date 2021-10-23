@@ -5,10 +5,20 @@ import BlockingMessage from "./BlockingMessage";
 import Loading from "./Loading";
 
 const PrivateRoute = ({ children }) => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
+
   useEffect(() => {
-    console.log(user, isAuthenticated, isLoading);
-  }, [user, isAuthenticated, isLoading]);
+    const fetchAuth0Token = async () => {
+      const accessToken = await getAccessTokenSilently({
+        audience: `authentication-manufacturing-company-reok-fatnag`,
+      });
+      localStorage.setItem("token", accessToken);
+      console.log(accessToken);
+    };
+    if (isAuthenticated) {
+      fetchAuth0Token();
+    }
+  }, [isAuthenticated]);
 
   if (isLoading)
     return (

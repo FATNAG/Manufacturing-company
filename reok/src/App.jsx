@@ -23,6 +23,7 @@ function App() {
       domain="manufacturing-company-reok.us.auth0.com"
       clientId="QyruU5gjTJ5oUtXIFOHFgt5Cz9uKvGei"
       redirectUri={window.location.origin}
+      audience="authentication-manufacturing-company-reok-fatnag"
     >
       <Router>
         <Switch>

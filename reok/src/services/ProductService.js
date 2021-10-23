@@ -2,23 +2,55 @@ import axios from "axios";
 
 const productsUrl = "http://localhost:3002/productos";
 
+const getToken = () => {
+  return `Bearer ${localStorage.getItem("token")}`;
+};
+
 export const getProduct = async (id) => {
-    return await axios.get(`${productsUrl}/${id}`);
-}
+  return await axios.get(`${productsUrl}/${id}`);
+};
 
 export const getProducts = async () => {
-    return await axios.get(`${productsUrl}/`);
-}
+  const options = {
+    method: "GET",
+    url: `${productsUrl}/`,
+    headers: {
+      Authorization: getToken(),
+    },
+  };
+  return await axios.request(options);
+};
 
 export const addProduct = async (product) => {
-    return await axios.post(`${productsUrl}/`, product);
-    
-}
+  const options = {
+    method: "POST",
+    url: `${productsUrl}/`,
+    headers: { "Content-Type": "application/json", Authorization: getToken() },
+  };
+  return await axios.request(options, product);
+};
 
 export const deleteProduct = async (id) => {
-    return await axios.delete(`${productsUrl}/${id}`);
-}
+  const options = {
+    method: "DELETE",
+    url: `${productsUrl}/${id}`,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: getToken(),
+    },
+  };
+  return await axios.request(options);
+};
 
 export const editProduct = async (product) => {
-    return await axios.put(`${productsUrl}/${product._id}`, product);
-}
+  const options = {
+    method: "PUT",
+    url: `${productsUrl}/${product._id}`,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: getToken(),
+    },
+    product,
+  };
+  return await axios.request(options);
+};
