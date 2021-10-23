@@ -57,19 +57,19 @@ export function EditUser() {
             <Typography variant="h4">Editar Usuario</Typography>
             <FormControl>
                 <InputLabel htmlFor="my-input">Nombre</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="descripcion" value={nombre} id="my-input" />
+                <Input onChange={(e) => onValueChange(e)} name="nombre" value={nombre} id="my-input" />
             </FormControl>
             <FormControl>
                 <InputLabel htmlFor="my-input">Apellido</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="descripcion" value={apellido} id="my-input" />
+                <Input onChange={(e) => onValueChange(e)} name="apellido" value={apellido} id="my-input" />
             </FormControl>
             <FormControl>
                 <InputLabel htmlFor="my-input">Email</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="descripcion" value={email} id="my-input" />
+                <Input onChange={(e) => onValueChange(e)} name="email" value={email} id="my-input" />
             </FormControl>
             <FormControl>
                 <InputLabel htmlFor="my-input">Telefono</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="valor" value={telefono} id="my-input" />
+                <Input onChange={(e) => onValueChange(e)} name="telefono" value={telefono} id="my-input" />
             </FormControl>
             <FormControl component="fieldset">
                 <FormLabel component="legend">Autorizar</FormLabel>
@@ -85,7 +85,7 @@ export function EditUser() {
             </FormControl>
             <FormControl>
                 <InputLabel htmlFor="my-input">Rol</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="valor" value={rol} id="my-input" />
+                <Input onChange={(e) => onValueChange(e)} name="rol" value={rol} id="my-input" />
             </FormControl>
             <FormControl>
                 <Button variant="contained" onClick={(e) => updateUserData()} color="primary">Editar Usuario</Button>
