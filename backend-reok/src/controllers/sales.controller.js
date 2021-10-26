@@ -10,19 +10,19 @@ const getSale = async (req, res) => {
       res.status(404).json({
         error: {
           code: 404,
-          message: "Sale not found",
-        },
-      });
+          message: "Sale not found"
+        }
+      })
     }
   } else {
     res.status(404).json({
       error: {
         code: 404,
-        message: "ID not found",
-      },
-    });
+        message: "ID not found"
+      }
+    })
   }
-};
+}
 
 const getSales = async (req, res) => {
   try {
@@ -32,11 +32,11 @@ const getSales = async (req, res) => {
     res.status(404).json({
       error: {
         code: 404,
-        message: "Problems with the DB: " + err.message,
-      },
-    });
+        message: "Problems with the DB: " + err.message
+      }
+    })
   }
-};
+}
 
 const createSale = async (req, res) => {
   const errors = validationResult(req);
@@ -44,8 +44,8 @@ const createSale = async (req, res) => {
     return res.status(400).json({
       error: {
         code: 404,
-        errors: errors.array(),
-      },
+        errors: errors.array()
+      }
     });
   }
   let sale = new Sales(req.body);
@@ -56,11 +56,11 @@ const createSale = async (req, res) => {
     res.status(404).json({
       error: {
         code: 404,
-        message: "Problemas con la base de datos" + err.message,
-      },
-    });
+        message: "Problemas con la base de datos" + err.message
+      }
+    })
   }
-};
+}
 
 const editSale = async (req, res) => {
   const errors = validationResult(req);
@@ -68,8 +68,8 @@ const editSale = async (req, res) => {
     return res.status(400).json({
       error: {
         code: 404,
-        errors: errors.array(),
-      },
+        errors: errors.array()
+      }
     });
   }
   try {
@@ -79,19 +79,19 @@ const editSale = async (req, res) => {
       description: req.body.description,
       value: req.body.value,
       amount: req.body.amount,
-      total: req.body.total,
-    };
+      total: req.body.total
+    }
     await Sales.findByIdAndUpdate(req.params.id, newSale);
     res.status(201).json({ data: newSale });
   } catch (err) {
     res.status(404).json({
       error: {
         code: 404,
-        message: "ID not found",
-      },
-    });
+        message: "ID not found"
+      }
+    })
   }
-};
+}
 
 const deleteSale = async (req, res) => {
   if (req.params.id != "undefined") {
@@ -102,19 +102,19 @@ const deleteSale = async (req, res) => {
       res.status(404).json({
         error: {
           code: 404,
-          message: "saleo no encontrado",
-        },
-      });
+          message: "venta no encontrada"
+        }
+      })
     }
   } else {
     res.status(404).json({
       error: {
         code: 404,
-        message: "ID not found",
-      },
-    });
+        message: "ID not found"
+      }
+    })
   }
-};
+}
 
 module.exports.getSale = getSale;
 module.exports.getSales = getSales;
