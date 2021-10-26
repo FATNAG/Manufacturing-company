@@ -99,7 +99,6 @@ const updateUser = async (req, res) => {
     }
 }
 
-
 const deleteUser = async (req, res) => {
     if (req.params.id != 'undefined') {
         try {
