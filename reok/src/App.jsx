@@ -22,8 +22,7 @@ function App() {
     <Auth0Provider
       domain="manufacturing-company-reok.us.auth0.com"
       clientId="QyruU5gjTJ5oUtXIFOHFgt5Cz9uKvGei"
-      redirectUri={window.location.origin}
-    >
+      redirectUri={window.location.origin} >
       <Router>
         <Switch>
           <Route path={["/Products"]}>
@@ -32,11 +31,7 @@ function App() {
                 <Switch>
                   <Route exact path="/Products" component={ProductList} />
                   <Route exact path="/Products/add" component={CreateProduct} />
-                  <Route
-                    exact
-                    path="/Products/edit/:id"
-                    component={EditProduct}
-                  />
+                  <Route exact path="/Products/edit/:id" component={EditProduct} />
                 </Switch>
               </Products>
             </PrivateRoute>
