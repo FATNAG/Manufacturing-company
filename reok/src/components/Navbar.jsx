@@ -33,7 +33,7 @@ const Navbar = ({title}) => {
       <div className="page-title">
         <div className="image-profile">
           <button onClick={() => loginWithRedirect()}>
-            <img src={profileImage} />
+            <img src={profileImage} alt='Profile'/>
           </button>
         </div>
         <div className="description-profile">

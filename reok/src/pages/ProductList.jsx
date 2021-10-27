@@ -33,7 +33,6 @@ export function ProductList() {
 
     const getAllProducts = async () => {
         let response = await getProducts();
-        console.log(response);
         setProducts(response.data.data);
     }
 

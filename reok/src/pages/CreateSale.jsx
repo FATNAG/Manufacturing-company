@@ -6,11 +6,7 @@ import {
   Input,
   Button,
   makeStyles,
-  Typography,
-  RadioGroup,
-  FormLabel,
-  FormControlLabel,
-  Radio} from "@material-ui/core";
+  Typography,} from "@material-ui/core";
 import { createSale } from "../services/SalesService";
 import { useHistory } from "react-router-dom";
 

@@ -1,4 +1,4 @@
-import react, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FormGroup, FormControl, InputLabel, Input, Button, makeStyles, Typography, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
 import { editUser, getUser } from '../services/UserService';
 import { useHistory, useParams } from 'react-router-dom';
@@ -31,8 +31,9 @@ export function EditUser() {
     const { id } = useParams();
 
     useEffect(() => {
-        loadUserData();
-    }, [])
+      loadUserData();
+      // eslint-disable-next-line
+    },[])
 
     const loadUserData = async () => {
         let response = await getUser(id);

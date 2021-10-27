@@ -1,5 +1,4 @@
 import Navbar from "components/Navbar";
-import Footer from "components/Footer";
 import "assets/css/styleVendedores.css";
 function Vendors() {
     return (
@@ -340,7 +339,7 @@ function Vendors() {
                         <div className="card-body">
                             <div className="customer">
                                 <div className="info">
-                                    <img src="../media/images/pho" width="40px" height="40px"/>
+                                    <img src="../media/images/pho" width="40px" height="40px" alt=''/>
                                 </div>
                                 <div>
                                     <h4>Dayana Velasquez</h4> 

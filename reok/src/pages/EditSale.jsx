@@ -6,11 +6,7 @@ import {
   Input,
   Button,
   makeStyles,
-  Typography,
-  RadioGroup,
-  FormLabel,
-  FormControlLabel,
-  Radio,
+  Typography
 } from "@material-ui/core";
 import { editSale, getSale } from "../services/SalesService";
 import { useHistory, useParams } from "react-router-dom";
@@ -41,10 +37,6 @@ export function EditSale() {
 
   const { id } = useParams();
 
-  useEffect(() => {
-    loadSaleData();
-  }, []);
-
   const loadSaleData = async () => {
     let response = await getSale(id);
     setSale(response.data.data);
@@ -59,6 +51,11 @@ export function EditSale() {
     history.push("/Sales");
   };
 
+  useEffect(() => {
+    loadSaleData();
+    // eslint-disable-next-line
+  }, []);
+  
   return (
     <FormGroup className={classes.container}>
       <Typography variant="h4">Editar venta</Typography>
