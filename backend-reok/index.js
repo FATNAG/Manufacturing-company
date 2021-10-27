@@ -21,7 +21,7 @@ app.use(morgan("combined"));
 
 require('dotenv').config();
 
-const port = process.env.PORT;
+const port = process.env.PORT ||3002;
 
 app.listen(port, () => {
     console.log(`server listen http://localhost:${port}`)
