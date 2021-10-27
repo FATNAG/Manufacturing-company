@@ -55,7 +55,7 @@ export function EditSale() {
   };
 
   const updateProductData = async () => {
-    await editSale(sale);
+    await editSale(sale, id);
     history.push("/Sales");
   };
 

@@ -22,12 +22,13 @@ export const getProducts = async () => {
 };
 
 export const addProduct = async (product) => {
-  const options = {
-    method: "POST",
-    url: `${productsUrl}/`,
-    headers: { "Content-Type": "application/json", Authorization: getToken() },
-  };
-  return await axios.request(options, product);
+  console.log(product)
+  return await axios.post(`${productsUrl}/`, product, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: getToken(),
+    },
+  });
 };
 
 export const deleteProduct = async (id) => {
@@ -42,15 +43,11 @@ export const deleteProduct = async (id) => {
   return await axios.request(options);
 };
 
-export const editProduct = async (product) => {
-  const options = {
-    method: "PUT",
-    url: `${productsUrl}/${product._id}`,
+export const editProduct = async (product, id) => {
+  return await axios.put(`${productsUrl}/${id}`, product, {
     headers: {
       "Content-Type": "application/json",
       Authorization: getToken(),
     },
-    product,
-  };
-  return await axios.request(options);
+  });
 };

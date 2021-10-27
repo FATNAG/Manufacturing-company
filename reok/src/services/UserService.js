@@ -22,13 +22,12 @@ export const getUsers = async () => {
 };
 
 export const addUser = async (user) => {
-  const options = {
-    method: "POST",
-    url: `${usersUrl}/`,
-    headers: { "Content-Type": "application/json", Authorization: getToken() },
-    user,
-  };
-  return await axios.request(options);
+  return await axios.post(`${usersUrl}/`, user, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: getToken(),
+    },
+  });
 };
 
 export const deleteUser = async (id) => {
@@ -43,17 +42,11 @@ export const deleteUser = async (id) => {
   return await axios.request(options);
 };
 
-export const editUser = async (
-    user,
-) => {
-  const options = {
-    method: "PUT",
-    url: `${usersUrl}/${user._id}`,
+export const editUser = async (user, id) => {
+  return await axios.put(`${usersUrl}/${id}`, user, {
     headers: {
       "Content-Type": "application/json",
       Authorization: getToken(),
     },
-    user,
-  };
-  return await axios.put(options);
+  });
 };

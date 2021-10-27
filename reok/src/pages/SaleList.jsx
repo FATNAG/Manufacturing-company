@@ -41,7 +41,6 @@ export function SaleList() {
 
   const getAllSales = async () => {
     let response = await getSales();
-    console.log(response);
     setSales(response.data.data);
   };
 

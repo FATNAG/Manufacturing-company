@@ -28,6 +28,7 @@ export function EditProduct() {
     const { id } = useParams();
 
     useEffect(() => {
+        console.log(id);
         loadProductData();
     }, [])
 
@@ -45,7 +46,7 @@ export function EditProduct() {
     }
 
     const updateProductData = async () => {
-        await editProduct(product);
+        await editProduct(product, id);
         history.push('/Products');
     }
 

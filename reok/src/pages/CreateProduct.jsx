@@ -4,6 +4,7 @@ import { addProduct } from '../services/ProductService';
 import { useHistory } from 'react-router-dom';
 
 const initialValue = {
+    _id: '',
     valor: '',
     descripcion: '',
     estado: true,

@@ -33,7 +33,6 @@ export function UserList() {
 
     const getAllUsers = async () => {
         let response = await getUsers();
-        console.log(response);
         setUsers(response.data.data);
     }
 

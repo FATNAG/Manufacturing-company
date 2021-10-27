@@ -13,7 +13,6 @@ const PrivateRoute = ({ children }) => {
         audience: `authentication-manufacturing-company-reok-fatnag`,
       });
       localStorage.setItem("token", accessToken);
-      console.log(accessToken);
     };
     if (isAuthenticated) {
       fetchAuth0Token();

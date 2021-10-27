@@ -48,7 +48,7 @@ export function EditUser() {
     }
 
     const updateUserData = async () => {
-        await editUser(user);
+        await editUser(user, id);
         history.push('/Users');
     }
 

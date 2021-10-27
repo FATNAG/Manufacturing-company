@@ -6,7 +6,7 @@ import "assets/css/products.css";
 const Sales = ({ children }) => {
   return (
     <div className="Productos">
-      <Navbar title={"Gestion de Productos"} />
+      <Navbar title={"Gestion de Ventas"} />
       <NavBarSales />
       <main>{children}</main>
       <Footer />

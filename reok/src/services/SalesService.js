@@ -22,12 +22,12 @@ export const getSales = async () => {
 };
 
 export const createSale = async (sale) => {
-  const options = {
-    method: "POST",
-    url: `${salesUrl}/`,
-    headers: { "Content-Type": "application/json", Authorization: getToken() },
-  };
-  return await axios.request(options, sale);
+  return await axios.post(`${salesUrl}/`, sale, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: getToken(),
+    },
+  });
 };
 
 export const deleteSale = async (id) => {
@@ -42,14 +42,11 @@ export const deleteSale = async (id) => {
   return await axios.request(options);
 };
 
-export const editSale = async (sale) => {
-  const options = {
-    method: "PUT",
-    url: `${salesUrl}/${sale._id}`,
+export const editSale = async (sale, id) => {
+  return await axios.put(`${salesUrl}/${id}`, sale, {
     headers: {
       "Content-Type": "application/json",
       Authorization: getToken(),
     },
-  };
-  return await axios.request(options, sale);
+  });
 };
